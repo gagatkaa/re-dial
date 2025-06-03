@@ -1,0 +1,183 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+button,
+.pizza-action,
+.pizza-action:hover {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1rem;
+}
+
+body {
+  color: #212121;
+  background-color: hsl(34.29, 79.91%, 57.06%);
+  font-family: 'Bebas Neue', cursive;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h1>.small {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pizza__section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: hsl(34.29, 79.91%, 57.06%);
+}
+
+.pizza__section--order {
+  grid-column: 1 / span 2;
+}
+
+.pizza__image__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__wrapper {
+  background-color: hsl(34.29, 79.91%, 57.06%);
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}
+
+.pizza__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.pizza__image__wrapper>img {
+  max-width: 50%;
+}
+
+.stats__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: black;
+  gap: 0.2rem;
+  margin: 2rem;
+}
+
+.pizza {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all {
+  grid-column: 1 / -1;
+}
+
+.all__wrapper {
+  display: flex;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.configure__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 66rem;
+  margin: 0 auto;
+}
+
+.configure-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.item__image {
+  height: 150px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem 0;
+}
+
+.edit__container {
+  width: 66rem;
+  margin: 0 auto;
+}
+
+.error {
+  color: red;
+}
