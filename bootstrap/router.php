@@ -2,13 +2,19 @@
 // set routes
 $routes = array(
   'home' => array(
-    'controller' => 'Pizza',
+    'controller' => 'Content',
     'action' => 'home'
   ),
-  'api-create-pizza' => array(
-    'controller' => 'Pizza',
-    'action' => 'apiCreate'
+  'form' => array(
+    'controller' => 'Content',
+    'action' => 'form'
   )
+
+
+  // 'api-create-pizza' => array(
+  //   'controller' => 'Pizza',
+  //   'action' => 'apiCreate'
+  // )
 );
 
 if (empty($_GET['page'])) {

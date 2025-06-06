@@ -1,3 +1,10 @@
+:root {
+  --main-bg: #f8f7ed;
+  --main-text: #272727;
+  --button-bg: black;
+  --button-text: white;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -33,14 +40,14 @@ button,
   cursor: pointer;
   text-transform: uppercase;
   display: inline-block;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   font-size: 1rem;
 }
 
 body {
-  color: #212121;
-  background-color: hsl(34.29, 79.91%, 57.06%);
-  font-family: 'Bebas Neue', cursive;
+  color: #272727;
+  background-color: var(--main-bg);
+  font-family: "Bebas Neue", cursive;
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -55,7 +62,7 @@ h1 {
   font-size: 6rem;
 }
 
-h1>.small {
+h1 > .small {
   font-size: 2.5rem;
 }
 
@@ -73,7 +80,6 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: hsl(34.29, 79.91%, 57.06%);
 }
 
 .pizza__section--order {
@@ -88,7 +94,7 @@ h3 {
 }
 
 .section__wrapper {
-  background-color: hsl(34.29, 79.91%, 57.06%);
+  /* background-color: hsl(34.29, 79.91%, 57.06%); */
   display: flex;
   flex-direction: column;
   align-items: space-evenly;
@@ -101,7 +107,7 @@ h3 {
   font-size: 1.5rem;
 }
 
-.pizza__image__wrapper>img {
+.pizza__image__wrapper > img {
   max-width: 50%;
 }
 
