@@ -9,6 +9,10 @@ class ContentController extends Controller
   {
 
   }
+  public function challengeCTA()
+  {
+
+  }
 }
 // // Renders the home/configure page and handles standard form submissions
 // public function home()

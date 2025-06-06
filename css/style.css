@@ -1,8 +1,14 @@
 :root {
   --main-bg: #f8f7ed;
   --main-text: #272727;
-  --button-bg: black;
-  --button-text: white;
+  --dark-blue: #165f8c;
+  --light-blue: #96ccd9;
+  --medium-blue: #4b8fa0;
+  --gold: #bfa34e;
+  --light-gold: #eadeba;
+  --light-dark-blue: #668fa7;
+  --font-heading: "Fraunces", serif;
+  --font-body: "Work Sans", sans-serif;
 }
 
 html {
@@ -29,33 +35,69 @@ li {
   list-style-type: none;
   text-decoration: none;
 }
-
-button,
-.pizza-action,
-.pizza-action:hover {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  display: inline-block;
-  font-family: "Bebas Neue", cursive;
-  font-size: 1rem;
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 body {
   color: #272727;
   background-color: var(--main-bg);
-  font-family: "Bebas Neue", cursive;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  font-family: var(--font-body);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+}
+.logo {
+  align-self: center;
+}
+header {
+  display: flex;
+  width: 80rem;
+  height: 6rem;
+  padding: 1.5rem 5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+  flex-shrink: 0;
+  background-color: var(--light-blue);
+  border-radius: 0rem 0rem 1.25rem 1.25rem;
+}
+.menu {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem;
+  flex-shrink: 0;
+}
+.CTA__button {
+  display: inline-block;
+  padding: 1rem 1rem;
+  background-color: var(--gold);
+  color: var(--main-bg);
+
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-body, sans-serif);
+  white-space: nowrap;
+
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-header {
-  display: grid;
-  place-items: center;
-  padding: 1rem;
+.CTA__button:hover {
+  background-color: var(--dark-blue);
+  /* transform: translateY(-2px); */
 }
 
 h1 {

@@ -8,6 +8,18 @@ $routes = array(
   'form' => array(
     'controller' => 'Content',
     'action' => 'form'
+  ),
+  'idea1' => array(
+    'controller' => 'Content',
+    'action' => 'idea1'
+  ),
+  'stories' => array(
+    'controller' => 'Content',
+    'action' => 'stories'
+  ),
+  'challenge_CTA' => array(
+    'controller' => 'Content',
+    'action' => 'challengeCTA'
   )
 
 
