@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.33 331.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d8b25d;
+        stroke: #56400a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #56400a;
+        font-family: WorkSans-Regular, 'Work Sans';
+        font-size: 23px;
+      }
+
+      .cls-4 {
+        fill: #f2f0d5;
+        stroke: #5b5412;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_12" data-name="Layer 12">
+    <g id="Layer_19" data-name="Layer 19">
+      <g>
+        <rect class="cls-1" x="1" y="1" width="249.33" height="329.11" rx="24.53" ry="24.53"/>
+        <rect class="cls-4" x="25.67" y="22.26" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="98.11" y="22.26" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="171.89" y="22.26" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="25.67" y="98.7" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="98.11" y="98.7" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="171.89" y="98.7" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="25.67" y="174.7" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="99.44" y="174.7" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="173.22" y="174.7" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="25.67" y="250.26" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="99.44" y="250.26" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <rect class="cls-4" x="173.22" y="250.26" width="53.11" height="56.38" rx="4.84" ry="4.84"/>
+        <text class="cls-3" transform="translate(46.89 57.79)"><tspan x="0" y="0">1</tspan></text>
+        <text class="cls-3" transform="translate(118.22 57.79)"><tspan x="0" y="0">2</tspan></text>
+        <text class="cls-3" transform="translate(191.56 57.79)"><tspan x="0" y="0">3</tspan></text>
+        <text class="cls-3" transform="translate(46.89 134.46)"><tspan x="0" y="0">4</tspan></text>
+        <text class="cls-3" transform="translate(118.22 134.46)"><tspan x="0" y="0">5</tspan></text>
+        <text class="cls-3" transform="translate(191.56 134.46)"><tspan x="0" y="0">6</tspan></text>
+        <text class="cls-2" transform="translate(46.89 209.46)"><tspan x="0" y="0">7</tspan></text>
+        <text class="cls-3" transform="translate(118.22 209.46)"><tspan x="0" y="0">8</tspan></text>
+        <text class="cls-3" transform="translate(191.56 209.46)"><tspan x="0" y="0">9</tspan></text>
+        <text class="cls-3" transform="translate(45.22 290.12)"><tspan x="0" y="0">*</tspan></text>
+        <text class="cls-3" transform="translate(118.22 285.46)"><tspan x="0" y="0">0</tspan></text>
+        <text class="cls-3" transform="translate(191.56 285.46)"><tspan x="0" y="0">#</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

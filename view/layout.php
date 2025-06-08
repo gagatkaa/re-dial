@@ -40,7 +40,7 @@
         </h1>
         <nav class="home__nav">
             <ul class="menu">
-                <li class="menu__item"><a class="menu__link --active" href="index.php?page=home">Home</a></li>
+                <li class="menu__item"><a class="menu__link active" href="index.php?page=home">Home</a></li>
                 <li class="menu__item"><a class="menu__link" href="index.php?page=idea1">Ideas</a></li>
                 <li class="menu__item"><a class="menu__link" href="index.php?page=stories">Stories</a></li>
             </ul>

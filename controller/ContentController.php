@@ -13,6 +13,18 @@ class ContentController extends Controller
   {
 
   }
+  public function idea1()
+  {
+
+  }
+  public function idea2()
+  {
+
+  }
+  public function idea3()
+  {
+
+  }
 }
 // // Renders the home/configure page and handles standard form submissions
 // public function home()

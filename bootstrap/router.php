@@ -13,6 +13,14 @@ $routes = array(
     'controller' => 'Content',
     'action' => 'idea1'
   ),
+  'idea2' => array(
+    'controller' => 'Content',
+    'action' => 'idea2'
+  ),
+  'idea3' => array(
+    'controller' => 'Content',
+    'action' => 'idea3'
+  ),
   'stories' => array(
     'controller' => 'Content',
     'action' => 'stories'
