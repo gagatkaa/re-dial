@@ -126,7 +126,7 @@ main {
 .menu__link:hover {
   text-decoration: underline;
 }
-.--active {
+.active {
   text-decoration: underline;
 }
 .CTA__button {
@@ -430,7 +430,14 @@ h3 {
 .arrow-button-svg:hover svg path {
   fill: var(--dark-blue); /* new fill color on hover */
 }
+.secondary-button:hover svg path {
+  fill: var(--light-dark-blue); /* or any color you want */
+}
 .idea {
+  display: flex;
+  flex-direction: row;
+}
+.idea__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -447,17 +454,27 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
   text-align: left;
   align-self: flex-start;
   padding-bottom: 3rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.inverted {
+  flex-direction: column-reverse;
 }
 .navigation__button {
   align-self: flex-end;
 }
+.navigation__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .idea__howto-label {
   font-weight: 600;
-  display: inline-block; /* ensures it respects line-break */
+  display: inline-block;
   margin-bottom: 0.5rem;
 }
 .idea__description {

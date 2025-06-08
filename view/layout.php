@@ -1,3 +1,7 @@
+<?php
+$currentPage = $_GET['page'] ?? 'home';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,9 +44,18 @@
         </h1>
         <nav class="home__nav">
             <ul class="menu">
-                <li class="menu__item"><a class="menu__link active" href="index.php?page=home">Home</a></li>
-                <li class="menu__item"><a class="menu__link" href="index.php?page=idea1">Ideas</a></li>
-                <li class="menu__item"><a class="menu__link" href="index.php?page=stories">Stories</a></li>
+                <li class="menu__item">
+                    <a class="menu__link <?= $currentPage === 'home' ? 'active' : '' ?>"
+                        href="index.php?page=home">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link <?= in_array($currentPage, ['idea1', 'idea2', 'idea3']) ? 'active' : '' ?>"
+                        href="index.php?page=idea1">Ideas</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link <?= $currentPage === 'stories' ? 'active' : '' ?>"
+                        href="index.php?page=stories">Stories</a>
+                </li>
             </ul>
         </nav>
         <a class="CTA__button" href="index.php?page=challenge_CTA">Join the Challenge!</a>

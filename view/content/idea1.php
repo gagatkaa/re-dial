@@ -1,23 +1,28 @@
 <section class="idea__content container">
     <article class="idea">
-        <header class="idea__header">
-            <h2>Silent Hotline</h2>
-            <p class="idea__subtitle">Talk it out, even if no one’s listening.</p>
-        </header>
-        <div class="idea__description">
-            <p class="idea__instructions">
-                <span class="idea__howto-label">How to make it:</span><br>
-                Keep the receiver from an old phone. That’s it. Or just simulate the act with any object that fits in your hand.
+        <div class="idea__info">
+            <header class="idea__header">
+                <h2>Silent Hotline</h2>
+                <p class="idea__subtitle">Talk it out, even if no one’s listening.</p>
+            </header>
+            <div class="idea__description">
+                <p class="idea__instructions">
+                    <span class="idea__howto-label">How to make it:</span><br>
+                    Keep the receiver from an old phone. That’s it. Or just simulate the act with any object that fits
+                    in your hand.
 
-               
 
-            </p>
-            <p class="idea__instructions">
-                <span class="idea__howto-label">How it helps:</span><br>
-                Talking out loud can be a powerful way to process emotions, especially during panic or stress. It creates a safe, judgment-free moment of expression, like calling a version of yourself who always listens.
 
-            
-        </p>
+                </p>
+                <p class="idea__instructions">
+                    <span class="idea__howto-label">How it helps:</span><br>
+                    Talking out loud can be a powerful way to process emotions, especially during panic or stress. It
+                    creates a safe, judgment-free moment of expression, like calling a version of yourself who always
+                    listens.
+
+
+                </p>
+            </div>
         </div>
     </article>
     <div class="navigation__button">
