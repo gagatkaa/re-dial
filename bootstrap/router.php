@@ -28,13 +28,12 @@ $routes = array(
   'challenge_CTA' => array(
     'controller' => 'Content',
     'action' => 'challengeCTA'
+  ),
+
+  'api-add-story' => array(
+    'controller' => 'Content',
+    'action' => 'apiAddStory'
   )
-
-
-  // 'api-create-pizza' => array(
-  //   'controller' => 'Pizza',
-  //   'action' => 'apiCreate'
-  // )
 );
 
 if (empty($_GET['page'])) {

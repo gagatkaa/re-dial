@@ -1,29 +1,47 @@
 <h2 class="submit-form__header">#ReDialYourWay Submit Form</h2>
-<form class="submit-form">
+
+<?php
+// show the errors
+if (!empty($errors)) {
+    var_dump($errors);
+}
+?>
+
+<form method="post" action="index.php?page=form" class="submit-form">
+    <input type="hidden" name="action" value="add_story" class="form--add">
 
     <!-- Name Field -->
     <div class="field">
         <label for="name">
             Name/Nickname
-            <span title="Tell us who’s on the other end of the line."><i
-                    class="fa-solid fa-circle-info info__icon"></i></span>
+            <span title="Tell us who’s on the other end of the line.">
+                <i class="fa-solid fa-circle-info info__icon"></i>
+            </span>
         </label>
-        <input type="text" id="name" name="name" placeholder="Your name or nickname" required />
+        <input type="text" id="name" name="user_name" placeholder="Your name or nickname" required class="input" />
+        <span class="error"><?php if (!empty($errors['user_name']))
+            echo $errors['user_name']; ?></span>
     </div>
+
     <!-- When Used -->
     <div class="field">
         <label for="when">
             When did you use it?
-            <span title="At what moment did you reach for it?"><i class="fa-solid fa-circle-info info__icon"></i></span>
+            <span title="At what moment did you reach for it?">
+                <i class="fa-solid fa-circle-info info__icon"></i>
+            </span>
         </label>
-        <select id="when" name="when" required>
+        <select id="when" name="usage_time" class="input" required>
             <option value="">Select a moment...</option>
             <option value="morning">In the morning</option>
             <option value="panic">During a panic attack</option>
             <option value="stress">While feeling stressed</option>
             <option value="other">Other</option>
         </select>
+        <span class="error"><?php if (!empty($errors['usage_time']))
+            echo $errors['usage_time']; ?></span>
     </div>
+
     <!-- Which Tool -->
     <div class="field">
         <label for="tool-group">
@@ -32,63 +50,54 @@
                 <i class="fa-solid fa-circle-info info__icon"></i>
             </span>
         </label>
-        <div class="tool__checkboxes" id="tool-group">
-            <label class="checkbox-wrapper">
-                <input type="checkbox" name="tool" value="receiver" />
-                <span class="custom-checkbox"></span>
+        <div class="tool__radios" id="tool-group">
+            <label class="radio-wrapper">
+                <input class="input" type="radio" name="tool_used" value="Silent Hotline" required />
+                <span class="custom-radio"></span>
                 Receiver (Silent Hotline)
             </label>
-
-            <label class="checkbox-wrapper">
-                <input type="checkbox" name="tool" value="dial" />
-                <span class="custom-checkbox"></span>
+            <label class="radio-wrapper">
+                <input class="input" type="radio" name="tool_used" value="Breath Focus Spinner" />
+                <span class="custom-radio"></span>
                 Dial (Breathing Spinner)
             </label>
-
-            <label class="checkbox-wrapper">
-                <input type="checkbox" name="tool" value="keypad" />
-                <span class="custom-checkbox"></span>
+            <label class="radio-wrapper">
+                <input class="input" type="radio" name="tool_used" value="Grounding Keypad" />
+                <span class="custom-radio"></span>
                 Keypad (Grounding Prompts)
             </label>
         </div>
-
-
+        <span class="error"><?php if (!empty($errors['tool_used']))
+            echo $errors['tool_used']; ?></span>
     </div>
+
     <!-- How Did It Help -->
     <div class="field">
         <label for="impact">
             How did it help you?
-            <span title="Choose one of the suggestions or type your own."><i
-                    class="fa-solid fa-circle-info info__icon"></i></span>
+            <span title="Choose one of the suggestions or type your own.">
+                <i class="fa-solid fa-circle-info info__icon"></i>
+            </span>
         </label>
-        <input list="impactSuggestions" id="impact" name="impact" placeholder="Start typing..." />
-
-        <datalist id="impactSuggestions">
-            <option value="Helped me breathe slower and think clearer.">
-            <option value="Felt like I had a little safe space for a second.">
-            <option value="It distracted my anxious brain just enough to reset.">
-            <option value="Weirdly comforting to press buttons and follow the prompt.">
-            <option value="Didn’t expect it, but I actually felt calmer after.">
-            <option value="It made me smile — and that helped.">
-            <option value="My cat judged me, but I felt better.">
-            <option value="Grounded me when I felt floaty.">
-            <option value="Made me pause and just exist for a bit.">
-        </datalist>
+        <input type="text" id="impact" name="impact" required class="input" placeholder="Start typing..."
+            autocomplete="off" class="input" />
+        <ul class="custom-suggestions" id="suggestionBox"></ul>
+        <span class="error"><?php if (!empty($errors['impact']))
+            echo $errors['impact']; ?></span>
     </div>
-    <!-- Share Permission -->
 
+    <!-- Share Permission -->
     <fieldset>
-        <legend>
-            Can we share your story?
-        </legend>
+        <legend>Can we share your story?</legend>
         <label class="checkbox-wrapper">
-            <input type="checkbox" name="tool" value="keypad" />
+            <input type="checkbox" name="consent_to_share" value="1" />
             <span class="custom-checkbox"></span>
-            I agree to have my story featured publicly as part of the ReDial community.
+            <p>I agree to have my story featured publicly as part of the ReDial community.</p>
         </label>
     </fieldset>
 
-
     <!-- Submit Button -->
+
     <button type="submit">Submit Your Story</button>
+
 </form>

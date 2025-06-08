@@ -1,14 +1,14 @@
 {
-  const handleSubmitForm = e => {
+  const handleSubmitForm = (e) => {
     const $form = e.currentTarget;
     if (!$form.checkValidity()) {
       e.preventDefault();
       const inputs = document.querySelectorAll(`.input`);
-      inputs.forEach($input => showValidationInfo($input));
+      inputs.forEach(($input) => showValidationInfo($input));
     }
-  }
+  };
 
-  const handleInputField = e => {
+  const handleInputField = (e) => {
     const $input = e.currentTarget;
     const $error = $input.parentElement.querySelector(`.error`);
     if ($input.checkValidity()) {
@@ -16,7 +16,7 @@
     }
   };
 
-  const showTypeMismatch = type => {
+  const showTypeMismatch = (type) => {
     switch (type) {
       case `email`:
         return `e-mailadres`;
@@ -25,11 +25,11 @@
       case `tel`:
         return `telephone nr`;
     }
-  }
+  };
 
-  const showValidationInfo = $input => {
+  const showValidationInfo = ($input) => {
     // selecting the error element of each element
-    const $error = $input.parentElement.querySelector(`.error`);
+    const $error = $input.closest(".field")?.querySelector(".error");
 
     // check if the field is filled out
     if ($input.validity.valueMissing) {
@@ -37,27 +37,37 @@
     }
     // check if the input type matches
     if ($input.validity.typeMismatch) {
-      $error.textContent = `We're expecting a valid ${showTypeMismatch($input.getAttribute(`type`))}`;
+      $error.textContent = `We're expecting a valid ${showTypeMismatch(
+        $input.getAttribute(`type`)
+      )}`;
     }
     // check if the input length isn't too long
     if ($input.validity.tooLong) {
-      $error.textContent = `Please enter no more than ${$input.getAttribute(`maxlength`)} characters`;
+      $error.textContent = `Please enter no more than ${$input.getAttribute(
+        `maxlength`
+      )} characters`;
     }
     // check if the minimum input length is reached
     if ($input.validity.tooShort) {
-      $error.textContent = `Please enter at least ${$input.getAttribute(`minlength`)} characters`;
+      $error.textContent = `Please enter at least ${$input.getAttribute(
+        `minlength`
+      )} characters`;
     }
     // check if the numeric input value is larger / equal than the expected minimum
     if ($input.validity.rangeUnderflow) {
-      $error.textContent = `The value needs to be at least ${$input.getAttribute(`min`)}`;
+      $error.textContent = `The value needs to be at least ${$input.getAttribute(
+        `min`
+      )}`;
     }
     // check if the numeric input value is smaller / equal than the expected minimum
     if ($input.validity.rangeOverflow) {
-      $error.textContent = `The value needs to be less than ${$input.getAttribute(`max`)}`;
+      $error.textContent = `The value needs to be less than ${$input.getAttribute(
+        `max`
+      )}`;
     }
-  }
+  };
 
-  const handleBlurInput = e => {
+  const handleBlurInput = (e) => {
     showValidationInfo(e.currentTarget);
   };
 
@@ -67,7 +77,7 @@
     $form.addEventListener(`submit`, handleSubmitForm);
 
     const inputs = document.querySelectorAll(`.input`);
-    inputs.forEach($input => {
+    inputs.forEach(($input) => {
       $input.addEventListener(`blur`, handleBlurInput);
       $input.addEventListener(`input`, handleInputField);
     });

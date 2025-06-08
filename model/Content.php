@@ -14,18 +14,16 @@ class Content extends Model
     if (empty($data['name'])) {
       $errors[] = 'Please fill in a name';
     }
-    if (empty($data['description'])) {
-      $errors[] = 'Please fill in a description';
+    if (empty($data['when'])) {
+      $errors[] = 'Please pick an option';
     }
-    if (empty($data['price'])) {
-      $errors[] = 'Please fill in a price';
+    if (empty($data['tool_used'])) {
+      $errors[] = 'Please pick an option';
     }
-    if (!is_numeric($data['price'])) {
-      $errors[] = 'The price must contain a number.';
+    if (empty($data['impact'])) {
+      $errors[] = 'Please pick an option';
     }
-    if (empty($data['image'])) {
-      $errors[] = 'Please fill in a image';
-    }
+
 
     return $errors;
   }
