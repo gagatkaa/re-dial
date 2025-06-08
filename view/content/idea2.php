@@ -1,5 +1,5 @@
 <section class="idea__content  container">
-    <article class="idea">
+    <article class="idea inverted">
         <div class="idea__info">
             <header class="idea__header">
                 <h2>Breath Focus Spinner</h2>

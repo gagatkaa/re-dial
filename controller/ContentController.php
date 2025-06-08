@@ -25,6 +25,14 @@ class ContentController extends Controller
   {
 
   }
+  public function form()
+  {
+
+  }
+  public function stories()
+  {
+
+  }
 }
 // // Renders the home/configure page and handles standard form submissions
 // public function home()

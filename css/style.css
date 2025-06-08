@@ -442,7 +442,11 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   gap: 5rem;
-  width: 31rem;
+}
+.idea__image {
+  width: 50vw;
+  height: auto;
+  object-fit: contain;
 }
 .idea__header > h2 {
   font-size: 3rem;
@@ -461,7 +465,7 @@ h3 {
   gap: 2rem;
 }
 .inverted {
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
 }
 .navigation__button {
   align-self: flex-end;
@@ -487,4 +491,26 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem;
+}
+.CTA__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+  line-height: 1.875rem;
+  margin-bottom: 5rem;
+}
+.CTA__header > h2 {
+  font-size: 3rem;
+}
+.CTA__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  width: 50vw;
 }

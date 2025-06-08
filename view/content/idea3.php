@@ -21,6 +21,7 @@
                 </p>
             </div>
         </div>
+        <img class="idea__image" src="assets/intro_phone.svg" alt="Breath Focus Spinner">
     </article>
     <div class="navigation__buttons">
         <a href="index.php?page=idea2" class="arrow-button-svg  secondary-button">
