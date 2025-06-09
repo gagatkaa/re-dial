@@ -17,4 +17,3 @@ $controllerObj = new $controllerName();
 $controllerObj->route = $route;
 $controllerObj->filter();
 $controllerObj->render();
-

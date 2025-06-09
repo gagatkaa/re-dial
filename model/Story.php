@@ -7,8 +7,6 @@ class Story extends Model
   public $timestamps = false; // ✅ if you're not using created_at / updated_at
   protected $table = 'user_stories'; // ✅ THIS is required!
 
-
-
   protected $fillable = [
     'user_name',
     'usage_time',

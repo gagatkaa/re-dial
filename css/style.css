@@ -512,9 +512,9 @@ h3 {
 }
 .stories__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding-block: 4rem; 
+  padding-block: 4rem;
   width: 100%;
 }
 
@@ -538,12 +538,12 @@ h3 {
   font-size: 1.2rem;
 }
 
-.review-card__tool {
+.review-card__usage {
   font-style: italic;
   color: #666;
 }
 
-.review-card__impact {
+.review-card__data {
   line-height: 1.5;
 }
 

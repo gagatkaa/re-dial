@@ -24,34 +24,31 @@ const handleSubmitPizzaForm = async (e) => {
   // Clear the form inputs
   $createForm.reset();
 
-  // If the pizza was successfully created
   if (parsedResponse.result === "ok") {
-    const story = parsedResponse.data; // Destructure pizza info
+    const story = parsedResponse.data;
 
-    // Create DOM elements
-    // const $story = document.createElement("li");
-    // $story.classList.add("pizza__item");
+    const $story = document.createElement("div");
+    $story.classList.add("review-card");
 
-    // const $image = document.createElement("img");
-    // $image.classList.add("item__image");
-    // $image.src = `./assets/${pizza.image}`;
-    // $image.alt = pizza.name;
-    // $pizza.appendChild($image);
+    const $name = document.createElement("div");
+    $name.classList.add("review-card__name");
+    $name.textContent = story.user_name;
 
-    // const $name = document.createElement("h3");
-    // $name.textContent = pizza.name;
-    // $pizza.appendChild($name);
+    const $tool = document.createElement("div");
+    $tool.classList.add("review-card__tool");
+    $tool.textContent = story.tool_used;
 
-    // const $description = document.createElement("p");
-    // $description.textContent = pizza.description;
-    // $pizza.appendChild($description);
+    const $impact = document.createElement("div");
+    $impact.classList.add("review-card__impact");
+    $impact.textContent = story.impact;
 
-    // const $price = document.createElement("p");
-    // $price.textContent = `${pizza.price}$`;
-    // $pizza.appendChild($price);
+    $story.appendChild($name);
+    $story.appendChild($tool);
+    $story.appendChild($impact);
 
-    // Add pizza to the top of the list
-    $storiesList.prepend($story);
+    if ($storiesList) {
+      $storiesList.prepend($story);
+    }
   }
 
   // Optionally remove loading state here if used
@@ -79,30 +76,32 @@ const suggestions = [
 const input = document.getElementById("impact");
 const suggestionBox = document.getElementById("suggestionBox");
 
-input.addEventListener("input", () => {
-  const value = input.value.toLowerCase();
-  suggestionBox.innerHTML = "";
+if (input) {
+  input.addEventListener("input", () => {
+    const value = input.value.toLowerCase();
+    suggestionBox.innerHTML = "";
 
-  if (value) {
-    const filtered = suggestions.filter((text) =>
-      text.toLowerCase().includes(value)
-    );
+    if (value) {
+      const filtered = suggestions.filter((text) =>
+        text.toLowerCase().includes(value)
+      );
 
-    filtered.forEach((text) => {
-      const li = document.createElement("li");
-      li.textContent = text;
-      li.onclick = () => {
-        input.value = text;
-        suggestionBox.style.display = "none";
-      };
-      suggestionBox.appendChild(li);
-    });
+      filtered.forEach((text) => {
+        const li = document.createElement("li");
+        li.textContent = text;
+        li.onclick = () => {
+          input.value = text;
+          suggestionBox.style.display = "none";
+        };
+        suggestionBox.appendChild(li);
+      });
 
-    suggestionBox.style.display = filtered.length ? "block" : "none";
-  } else {
-    suggestionBox.style.display = "none";
-  }
-});
+      suggestionBox.style.display = filtered.length ? "block" : "none";
+    } else {
+      suggestionBox.style.display = "none";
+    }
+  });
+}
 
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".field")) {

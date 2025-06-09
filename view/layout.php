@@ -1,5 +1,6 @@
 <?php
-$currentPage = $_GET['page'] ?? 'home';
+$allowedPages = ['home', 'idea1', 'idea2', 'idea3', 'stories', 'challenge_CTA'];
+$currentPage = in_array($_GET['page'] ?? '', $allowedPages) ? $_GET['page'] : 'home';
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,10 @@ $currentPage = $_GET['page'] ?? 'home';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Fraunces:opsz,wght@72..144,500..600&display=swap"
+        rel="stylesheet">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -96,8 +100,9 @@ $currentPage = $_GET['page'] ?? 'home';
 
             </ul>
         </div>
-        <script src="js/script.js"></script>
-        <script src="js/validate.js"></script>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/validate.js"></script>
 </body>
 
 </html>

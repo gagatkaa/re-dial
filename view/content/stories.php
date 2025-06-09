@@ -12,12 +12,13 @@
         </article>
     </section>
 </div>
-<div class="stories__cards container">
+<div class="stories__cards story__list container">
     <?php foreach ($user_stories as $story): ?>
         <div class="review-card">
             <div class="review-card__name"><?= htmlspecialchars($story->user_name) ?></div>
-            <div class="review-card__tool"><?= htmlspecialchars($story->tool_used) ?></div>
-            <div class="review-card__impact"><?= nl2br(htmlspecialchars($story->impact)) ?></div>
+            <div class="review-card__usage"><?= htmlspecialchars($story->usage_time) ?></div>
+            <div class="review-card__data"><?= htmlspecialchars($story->tool_used) ?></div>
+            <div class="review-card__data"><?= nl2br(htmlspecialchars($story->impact)) ?></div>
         </div>
     <?php endforeach; ?>
 </div>
