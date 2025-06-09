@@ -148,6 +148,7 @@ main {
 .CTA__button:hover {
   background-color: var(--dark-blue);
   color: var(--main-bg);
+  transform: translateY(-2px);
 }
 .text-underline {
   text-decoration: underline;
@@ -408,6 +409,8 @@ h3 {
   text-decoration: none;
   color: var(--main-bg);
   transition: color 0.3s ease;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .arrow-button-svg svg path {
@@ -425,6 +428,7 @@ h3 {
 
 .arrow-button-svg:hover {
   color: var(--main-bg); /* text color on hover */
+  transform: translateY(-2px);
 }
 
 .arrow-button-svg:hover svg path {
@@ -492,29 +496,83 @@ h3 {
   font-weight: 400;
   line-height: 1.875rem;
 }
-.CTA__section {
+
+.stories__bg {
+  background-image: url(../assets/stories_bg.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 5vh 0;
+
+  width: 100%;
+
+  padding: 2.5vh 0; /* top & bottom padding */
+  min-height: 50vh; /* ensures it stretches vertically */
+  box-sizing: border-box;
+}
+.stories__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+  padding-block: 4rem; 
+  width: 100%;
+}
+
+.review-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+}
+
+.review-card__name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.review-card__tool {
+  font-style: italic;
+  color: #666;
+}
+
+.review-card__impact {
+  line-height: 1.5;
+}
+
+.centered-button {
+  justify-self: center;
+}
+.centered-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 5rem;
+  gap: 4rem;
   line-height: 1.875rem;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 }
-.CTA__header > h2 {
+.centered-section h2 {
   font-size: 3rem;
+  color: var(--dark-blue);
 }
-.CTA__text {
+.centered-section article {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem;
   width: 50vw;
 }
-
 .submit-form {
   max-width: 30vw;
   margin: 0 auto;
@@ -601,7 +659,7 @@ fieldset > label {
 .custom-checkbox {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #f9f3da; /* soft beige */
+  background-color: var(--light-gold);
   border: 2px solid var(--gold);
   border-radius: 5px;
   position: relative;
@@ -647,7 +705,7 @@ fieldset > label {
 .custom-radio {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #f9f3da;
+  background-color: var(--light-gold);
   border: 2px solid var(--gold);
   border-radius: 50%;
   position: relative;
@@ -662,7 +720,7 @@ fieldset > label {
   left: 7px;
   width: 6px;
   height: 6px;
-  background-color: var(--accent, #bfa34e);
+  background-color: var(--gold);
   border-radius: 50%;
 }
 .radio-wrapper:hover .custom-radio {
@@ -700,8 +758,8 @@ input[list] {
 }
 
 .info__icon {
-  color: var(--gold); /* or use your design token like var(--accent) */
-  font-size: 1rem; /* optional: adjust size */
+  color: var(--gold);
+  font-size: 1rem;
   cursor: help;
 }
 
@@ -709,9 +767,9 @@ input[list] {
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 1px solid var(--accent, #bfa34e);
+  border: 1px solid var(--gold);
   border-radius: 6px;
-  background-color: var(--main-bg, #fff);
+  background-color: var(--main-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 
   z-index: 10;

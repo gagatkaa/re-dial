@@ -43,6 +43,17 @@ class StoryController extends Controller
         $this->set('user_stories', $user_stories);
 
     }
+    public function stories()
+    {
+        // Fetch only public (consent given) stories
+        $public_stories = Story::where('consent_to_share', 1)
+            ->orderBy('id', 'desc')
+            ->get();
+
+        $this->set('user_stories', $public_stories);
+        $this->render('stories'); // Assuming your view is in view/story/stories.php
+    }
+
     public function apiAddStory()
     {
         // Call private helper that does all the logic

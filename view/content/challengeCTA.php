@@ -1,4 +1,4 @@
-<section class="CTA__section container">
+<section class="CTA__section centered-section container">
     <header class="CTA__header">
         <h2>Your Turn to #ReDialYourWay</h2>
     </header>
