@@ -84,3 +84,12 @@
         </a>
     </article>
 </section>
+<div class="challenge-popup hidden" id="challengePopup">
+    <div class="challenge-popup__content">
+        <h2>Join the #ReDialYourWay Challenge</h2>
+        <p>Tried one of our ideas with an old landline phone?</p>
+        <p>Submit it and get featured!</p>
+        <a class="CTA__button" href="index.php?page=challenge_CTA">Join Now</a>
+    </div>
+    <button class="challenge-popup__close" id="closePopup">&times;</button>
+</div>

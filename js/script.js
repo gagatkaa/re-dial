@@ -1,9 +1,7 @@
-// Get the DOM elements
-const $storiesList = document.querySelector(".story__list"); // The container to list pizzas
-const $createForm = document.querySelector(".submit-form"); // The form used to add a new pizza
+const $storiesList = document.querySelector(".story__list");
+const $createForm = document.querySelector(".submit-form");
 
-// Function to handle form submission
-const handleSubmitPizzaForm = async (e) => {
+const handleInsertStoryForm = async (e) => {
   e.preventDefault(); // Prevent full page reload
 
   // Basic HTML5 validation check
@@ -50,14 +48,11 @@ const handleSubmitPizzaForm = async (e) => {
       $storiesList.prepend($story);
     }
   }
-
-  // Optionally remove loading state here if used
 };
 
-// Attach the submit event to the form
 const init = () => {
   if ($createForm) {
-    $createForm.addEventListener("submit", handleSubmitPizzaForm);
+    $createForm.addEventListener("submit", handleInsertStoryForm);
   }
 };
 
@@ -109,4 +104,22 @@ document.addEventListener("click", (e) => {
   }
 });
 
-init(); // Initialize the script on page load
+const popup = document.getElementById("challengePopup");
+const closeBtn = document.getElementById("closePopup");
+
+// Only show on home page
+const isHomePage =
+  window.location.href.includes("page=home") ||
+  window.location.href.endsWith("index.php");
+
+if (isHomePage) {
+  setTimeout(() => {
+    popup.classList.remove("hidden");
+  }, 5000); // show after 5 seconds
+}
+
+closeBtn.addEventListener("click", () => {
+  popup.classList.add("hidden");
+});
+
+init();

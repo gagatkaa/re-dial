@@ -79,7 +79,7 @@ class ContentController extends Controller
   public function apiAddStory()
   {
     // Call private helper that does all the logic
-    $result = $this->_handleInsertStory();
+    $result = $this->_handleInsertStoryForm();
 
     // Send the result back as JSON
     echo json_encode($result);
@@ -87,7 +87,7 @@ class ContentController extends Controller
   }
 
   // Reusable method to handle insertion logic (shared by apiCreate & optionally others)
-  private function _handleInsertStory()
+  private function _handleInsertStoryForm()
   {
     // Create new pizza instance from POST data
     $newStory = new Story();
