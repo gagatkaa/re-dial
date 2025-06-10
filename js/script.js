@@ -3,13 +3,11 @@ const $createForm = document.querySelector(".submit-form");
 
 const handleInsertStoryForm = async (e) => {
   e.preventDefault(); // Prevent full page reload
-
   // Basic HTML5 validation check
   if (!$createForm.checkValidity()) {
     // If invalid, stop here — validate.js handles error display
     return;
   }
-
   // Send form data using fetch
   const response = await fetch("index.php?page=api-add-story", {
     method: "post",
@@ -18,7 +16,6 @@ const handleInsertStoryForm = async (e) => {
 
   // Parse the JSON response
   const parsedResponse = await response.json();
-
   // Clear the form inputs
   $createForm.reset();
 
@@ -47,6 +44,8 @@ const handleInsertStoryForm = async (e) => {
     if ($storiesList) {
       $storiesList.prepend($story);
     }
+
+    popup.classList.remove("hidden");
   }
 };
 
@@ -104,7 +103,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-const popup = document.getElementById("challengePopup");
+const popup = document.getElementById("genericPopup");
 const closeBtn = document.getElementById("closePopup");
 
 // Only show on home page
@@ -115,11 +114,15 @@ const isHomePage =
 if (isHomePage) {
   setTimeout(() => {
     popup.classList.remove("hidden");
-  }, 5000); // show after 5 seconds
+  }, 2000); // show after 5 seconds
 }
 
 closeBtn.addEventListener("click", () => {
   popup.classList.add("hidden");
 });
+
+const isFormPage =
+  window.location.href.includes("page=form") ||
+  window.location.href.endsWith("index.php");
 
 init();

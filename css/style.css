@@ -230,7 +230,7 @@ h3 {
   margin: 0 auto;
   padding: 0 3rem;
 }
-.challenge-popup {
+.popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -242,15 +242,11 @@ h3 {
   justify-content: center;
   z-index: 1000;
 }
-.challenge-popup h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.challenge-popup__content {
+
+.popup__content {
   background: white;
   padding: 2rem;
   border-radius: 1rem;
-  max-width: 30rem;
   text-align: center;
   position: relative;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
@@ -259,7 +255,7 @@ h3 {
   gap: 1rem;
 }
 
-.challenge-popup__close {
+.popup__close {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
@@ -269,6 +265,20 @@ h3 {
   cursor: pointer;
 }
 
+.popup h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+}
+.popup__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.secondary-button {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
 .hidden {
   display: none;
 }
@@ -642,7 +652,7 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem;
-  width: 55vw;
+  max-width: 45vw;
 }
 .submit-form {
   max-width: 30vw;

@@ -7,7 +7,7 @@
             </header>
             <div class="idea__description">
                 <p class="idea__instructions">
-                    <span class="idea__howto-label">How to make it:</span><br>
+                    <span class="idea__howto-label">How to make it:</span></br>
                     Keep the receiver from an old phone. That’s it. Or just simulate the act with any object that fits
                     in your hand.
 
@@ -15,7 +15,7 @@
 
                 </p>
                 <p class="idea__instructions">
-                    <span class="idea__howto-label">How it helps:</span><br>
+                    <span class="idea__howto-label">How it helps:</span></br>
                     Talking out loud can be a powerful way to process emotions, especially during panic or stress. It
                     creates a safe, judgment-free moment of expression, like calling a version of yourself who always
                     listens.

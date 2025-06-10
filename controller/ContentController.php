@@ -96,7 +96,6 @@ class ContentController extends Controller
     $newStory->tool_used = $_POST['tool_used'];
     $newStory->impact = $_POST['impact'];
     $newStory->consent_to_share = $_POST['consent_to_share'];
-    $newStory->submitted_at = $_POST['submitted_at'];
 
     // Validate data
     $errors = Story::validate($newStory);

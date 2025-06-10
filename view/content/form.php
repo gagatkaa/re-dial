@@ -101,3 +101,15 @@ if (!empty($errors)) {
     <button type="submit">Submit Your Story</button>
 
 </form>
+<div class="popup hidden" id="genericPopup">
+    <div class="popup__content">
+        <h2>Thanks for dialing in!</h2>
+        <p>Your story has been received!</p>
+        <p>You're now part of the <span class="bold-text">#ReDialYourWay</span> community.</p>
+        <div class="popup__buttons">
+            <a class="CTA__button secondary-button" href="index.php?page=challenge_CTA">Cancel</a>
+            <a class="CTA__button" href="index.php?page=stories">User Stories</a>
+        </div>
+        <button class="popup__close" id="closePopup">&times;</button>
+    </div>
+</div>
