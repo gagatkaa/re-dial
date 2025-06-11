@@ -1,5 +1,5 @@
 <section class="idea__content  container">
-    <article class="idea inverted">
+    <article class="idea">
         <div class="idea__info">
             <header class="idea__header">
                 <h2>Breath Focus Spinner</h2>
@@ -24,7 +24,20 @@
                 </p>
             </div>
         </div>
-        <img class="idea__image" src="assets/intro_phone.svg" alt="Breath Focus Spinner">
+        <div class="idea-2__interaction">
+            <div class="rotary__dial-wrapper">
+                <div class="rotaryDial">
+                    <img class="idea__image rotary-dial" src="assets/rotary_dial.svg" alt="Rotary Dial" />
+                </div>
+                <img class="dial-pin" src="assets/dial_pin.svg" alt="Dial Pin" />
+            </div>
+            <div id="breathingMessage" class="breathing__message"></div>
+            <div class="control__buttons">
+                <button class="CTA__button--round" id="playBtn"><i class="fa-solid fa-play fa-beat fa-2x"></i></button>
+                <button class="CTA__button--round" id="pauseBtn"><i class="fa-solid fa-pause fa-2x"></i></button>
+                <button class="CTA__button--round" id="stopBtn"><i class="fa-solid fa-stop fa-2x"></i></button>
+            </div>
+        </div>
     </article>
     <div class="navigation__buttons">
         <a href="index.php?page=idea1" class="arrow-button-svg  secondary-button">

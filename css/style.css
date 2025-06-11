@@ -331,7 +331,6 @@ h3 {
   gap: 0.5rem;
 }
 .secondary-button {
-  background-color: var(--light-blue);
   color: var(--dark-blue);
 }
 .hidden {
@@ -973,4 +972,73 @@ input[list] {
   font-size: 0.875rem;
   margin-top: 0.25rem;
   font-family: var(--font-body);
+}
+.rotary-dial {
+  transition: transform 1s ease-out;
+  transform-origin: center center;
+}
+
+@keyframes rotateDial {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotateDial 2s linear infinite;
+  transform-origin: center center;
+}
+.rotary__dial-wrapper {
+  position: relative;
+  width: 60%; /* adjust to your dial size */
+  height: auto;
+  margin: 0 auto;
+}
+
+.rotaryDial {
+  width: 100%;
+  height: 100%;
+}
+
+.rotary-dial {
+  width: 100%;
+  height: 100%;
+  transition: transform 4s ease-in-out;
+  transform-origin: center center;
+}
+
+.dial-pin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* clicks go through to dial */
+  z-index: 2; /* make sure it's on top */
+}
+.idea-2__interaction {
+  width: 50vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.control__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.breathing__message {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark-blue); /* or any color you want */
+  min-height: 2rem;
+  transition: opacity 0.5s ease;
 }

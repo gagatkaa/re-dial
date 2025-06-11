@@ -30,7 +30,7 @@
                     No pressure — it’s not saved, tracked, or judged. Just you, your voice, and a vintage receiver
                 </span>
                 <a class="CTA__button--round" id="openMicPopup">
-                    <i class="fa-solid fa-microphone fa-2x"></i>
+                    <i class="fa-solid fa-microphone fa-beat fa-2x"></i>
                 </a>
             </div>
         </div>
