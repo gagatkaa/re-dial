@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 219.36 219.36">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.36 219.36">
   <defs>
     <style>
       .cls-1 {
-        fill: #3fa0a0;
-      }
-
-      .cls-1, .cls-2 {
-        stroke: #0e5b59;
-      }
-
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
-        stroke-miterlimit: 10;
+        filter: url(#drop-shadow-2);
       }
 
       .cls-2 {
-        fill: #2c8484;
+        fill: #3fa0a0;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #0e5b59;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
       }
 
       .cls-3 {
-        fill: #94eded;
-        stroke: #2f7c84;
+        fill: #2c8484;
       }
 
       .cls-4 {
@@ -31,30 +30,55 @@
         stroke: #195059;
       }
 
+      .cls-7 {
+        fill: #79c4cc;
+      }
+
       .cls-5 {
         fill: #55babf;
       }
+
+      .cls-6 {
+        fill: #94eded;
+        filter: url(#drop-shadow-1);
+        stroke: #2f7c84;
+      }
     </style>
+    <filter id="drop-shadow-1" x="78.28" y="77.74" width="62.97" height="63.97" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="1"/>
+      <feGaussianBlur result="blur" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity=".4"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" x="13.12" y="14.31" width="191.45" height="182.54" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="1"/>
+      <feGaussianBlur result="blur-2" stdDeviation="0"/>
+      <feFlood flood-color="#000" flood-opacity=".4"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
   <g id="Layer_12" data-name="Layer 12">
     <g id="Layer_18" data-name="Layer 18">
       <g>
         <circle class="cls-4" cx="109.68" cy="109.68" r="109.16"/>
+        <path class="cls-7" d="M35.07,188.94c6.72,6.28,14.35,11.8,22.83,16.35,52.83,28.36,118.67,8.55,147.05-44.25,8.51-15.82,12.68-32.82,12.93-49.62-38.16,55.19-106.67,92.31-182.81,77.51Z"/>
         <circle class="cls-5" cx="109.68" cy="109.68" r="54.79"/>
-        <circle class="cls-3" cx="109.76" cy="109.22" r="30.98"/>
-        <g>
-          <circle class="cls-1" cx="106.26" cy="25.69" r="10.88"/>
-          <circle class="cls-1" cx="64.42" cy="38.29" r="10.88"/>
-          <circle class="cls-1" cx="183.27" cy="150.01" r="10.88"/>
-          <circle class="cls-1" cx="148.82" cy="35.6" r="10.88"/>
-          <circle class="cls-1" cx="180.58" cy="65.61" r="10.88"/>
-          <circle class="cls-1" cx="24.5" cy="112.61" r="10.88"/>
-          <circle class="cls-1" cx="37.1" cy="154.45" r="10.88"/>
-          <circle class="cls-1" cx="68.86" cy="184.47" r="10.88"/>
-          <circle class="cls-1" cx="34.4" cy="70.05" r="10.88"/>
-          <circle class="cls-1" cx="193.18" cy="107.45" r="10.88"/>
+        <circle class="cls-6" cx="109.76" cy="109.22" r="30.98"/>
+        <g class="cls-1">
+          <circle class="cls-2" cx="106.26" cy="25.69" r="10.88"/>
+          <circle class="cls-2" cx="64.42" cy="38.29" r="10.88"/>
+          <circle class="cls-2" cx="183.27" cy="150.01" r="10.88"/>
+          <circle class="cls-2" cx="148.82" cy="35.6" r="10.88"/>
+          <circle class="cls-2" cx="180.58" cy="65.61" r="10.88"/>
+          <circle class="cls-2" cx="24.5" cy="112.61" r="10.88"/>
+          <circle class="cls-2" cx="37.1" cy="154.45" r="10.88"/>
+          <circle class="cls-2" cx="68.86" cy="184.47" r="10.88"/>
+          <circle class="cls-2" cx="34.4" cy="70.05" r="10.88"/>
+          <circle class="cls-2" cx="193.18" cy="107.45" r="10.88"/>
         </g>
-        <path class="cls-2" d="M197.4,172.41l-12.29-19.8c-.3-.48.09-1.08.65-1.02l22.62,2.66c.46.05.73.54.52.96-1.46,2.9-6.41,12.51-10.42,17.27-.3.35-.84.31-1.09-.08Z"/>
+        <path class="cls-3" d="M197.4,172.41l-12.29-19.8c-.3-.48.09-1.08.65-1.02l22.62,2.66c.46.05.73.54.52.96-1.46,2.9-6.41,12.51-10.42,17.27-.3.35-.84.31-1.09-.08Z"/>
       </g>
     </g>
   </g>

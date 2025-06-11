@@ -8,19 +8,18 @@
             connected to yourself.</p>
         <a class="CTA__button" href="#aboutus">Show Me How</a>
     </div>
-    <img class="intro__image" src="assets/intro_phone.svg" alt="Old Landline phone">
+    <img class="intro__image" src="assets/home_phone.gif" alt="Old Landline phone">
 </section>
 <div class="section__bg">
     <section class="about__section container" id="aboutus">
         <article class="about__content">
             <header class="about__header">
-                <h3 class="about__title">Why a landline phone?</h3>
+                <h3 class="about__title">Why A Landline Phone?</h3>
             </header>
             <div class="about__text">
-                <p>Before smartphones, the landline was how we reached the people who mattered. It was physical,
-                    familiar,
-                    and full of meaning. Now, we're giving it a second life, not to call others, but to reconnect with
-                    ourselves.</p>
+                <p>Before smartphones and apps, we reached out to the world through a landline. It was steady,
+                    comforting, and part of our daily lives.
+                    Now, we're bringing it back. Not to connect with others, but to reconnect with yourself.</p>
             </div>
         </article>
         <article class="about__content left-aligned">
@@ -28,17 +27,17 @@
                 <h3 class="about__title">How Can It Help?</h3>
             </header>
             <div class="about__text">
-                <p>With just one object, you can slow your breath, calm your thoughts, and feel grounded again.Each tool
-                    uses part of the phone to create a soothing, simple experience. Made for moments when life feels
-                    too much.</p>
-                <p class="bold-text">Pick it up. Press a button. Find your way back.</p>
+                <p>With just one object, you can slow your breath, quiet your mind, and come back to the present.
+                    Each feature repurposes a part of the phone to create a soothing, intuitive ritual — perfect for
+                    moments when the world feels overwhelming.</p>
 
-
-
+            </div>
+            <a class="CTA__button" href="#tools">Ready To Dial A Number?</a>
         </article>
+
     </section>
 </div>
-<section class="tools__section container">
+<section class="tools__section container" id="tools">
     <header class="tools__header">
         <h3 class="tools__title">Three Ways to Reconnect</h3>
     </header>
@@ -87,9 +86,13 @@
 <div class="popup hidden" id="genericPopup">
     <div class="popup__content">
         <h2>Join the #ReDialYourWay Challenge</h2>
-        <p>Tried one of our ideas with an old landline phone?</p>
-        <p>Submit it and get featured!</p>
-        <a class="CTA__button" href="index.php?page=challenge_CTA">Join Now</a>
+        <div class="popup__text">
+            <p>Tried one of our ideas with an old landline phone?</p>
+            <p class="bold-text">Submit it and get featured!</p>
+        </div>
+        <div class="popup__button">
+            <a class="CTA__button" href="index.php?page=challenge_CTA">Join Now!</a>
+        </div>
         <button class="popup__close" id="closePopup">&times;</button>
     </div>
 </div>

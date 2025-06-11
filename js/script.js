@@ -114,7 +114,7 @@ const isHomePage =
 if (isHomePage) {
   setTimeout(() => {
     popup.classList.remove("hidden");
-  }, 2000); // show after 5 seconds
+  }, 2000); 
 }
 
 closeBtn.addEventListener("click", () => {

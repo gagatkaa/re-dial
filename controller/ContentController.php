@@ -89,23 +89,22 @@ class ContentController extends Controller
   // Reusable method to handle insertion logic (shared by apiCreate & optionally others)
   private function _handleInsertStoryForm()
   {
-    // Create new pizza instance from POST data
+
     $newStory = new Story();
     $newStory->user_name = $_POST['user_name'];
     $newStory->usage_time = $_POST['usage_time'];
     $newStory->tool_used = $_POST['tool_used'];
     $newStory->impact = $_POST['impact'];
-    $newStory->consent_to_share = $_POST['consent_to_share'];
 
     // Validate data
     $errors = Story::validate($newStory);
 
     if (empty($errors)) {
-      // Save pizza and return as array (likely used for frontend display)
+
       $newStory->save();
       return ['result' => 'ok', 'data' => $newStory->toArray()];
     } else {
-      // Return errors in a structured format
+
       return ['result' => 'error', 'data' => $errors];
     }
   }
