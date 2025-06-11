@@ -98,7 +98,7 @@ if (input) {
 }
 
 document.addEventListener("click", (e) => {
-  if (!e.target.closest(".field")) {
+  if (!e.target.closest(".field") && suggestionBox) {
     suggestionBox.style.display = "none";
   }
 });
@@ -111,18 +111,48 @@ const isHomePage =
   window.location.href.includes("page=home") ||
   window.location.href.endsWith("index.php");
 
-if (isHomePage) {
+if (isHomePage && popup) {
   setTimeout(() => {
     popup.classList.remove("hidden");
-  }, 2000); 
+  }, 2000);
 }
 
-closeBtn.addEventListener("click", () => {
-  popup.classList.add("hidden");
-});
+if (closeBtn && popup) {
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+}
 
 const isFormPage =
   window.location.href.includes("page=form") ||
   window.location.href.endsWith("index.php");
+
+const openMicBtn = document.getElementById("openMicPopup");
+const micPopup = document.getElementById("micPopup");
+const closeMicBtn = document.getElementById("closeMicPopup");
+
+if (openMicBtn && micPopup && closeMicBtn) {
+  openMicBtn.addEventListener("click", () => {
+    micPopup.classList.remove("hidden");
+    startMicVisualizer(); // init visualizer only when popup is opened
+  });
+
+  closeMicBtn.addEventListener("click", () => {
+    micPopup.classList.add("hidden");
+
+    // Add humorous message once
+    const tooltip = document.querySelector(".idea__action");
+    if (tooltip && !tooltip.dataset.updated) {
+      const followUp = document.createElement("p");
+      followUp.textContent =
+        "See? That wasn’t so bad. You should talk to yourself more often.";
+      followUp.style.fontStyle = "italic";
+      followUp.style.lineHeight = "1.5rem";
+      followUp.style.color = "#0b6682";
+      tooltip.appendChild(followUp);
+      tooltip.dataset.updated = "true"; // prevent duplicate insertions
+    }
+  });
+}
 
 init();

@@ -164,6 +164,42 @@ main {
   color: var(--main-bg);
   transform: translateY(-2px);
 }
+.CTA__button--round {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  min-width: 5rem;
+  min-height: 5rem;
+
+  background-color: var(--gold);
+  color: var(--main-bg);
+
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  cursor: pointer;
+}
+.CTA__button--round:hover {
+  background-color: var(--dark-blue);
+  transform: translateY(-2px);
+}
+.idea__action {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.idea__tooltip {
+  font-size: 0.9rem;
+  color: var(--text-muted, #444);
+  max-width: 300px;
+  line-height: 1.4;
+}
+
 .text-underline {
   text-decoration: underline;
   text-decoration-thickness: 0.1rem; /* or try 0.05em */
@@ -465,6 +501,7 @@ h3 {
 .idea1 {
   background-image: url("../assets/phone_reciever.svg");
 }
+
 .idea2 {
   background-image: url("../assets/rotary_dial.svg");
   background-position: 50% 20%;
@@ -513,16 +550,19 @@ h3 {
 .idea {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 }
 .idea__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5rem;
+  width: 35vw;
 }
 .idea__image {
-  width: 50vw;
-  height: auto;
+  height: 70vh;
+  width: auto;
   object-fit: contain;
 }
 .idea__header > h2 {
@@ -534,7 +574,7 @@ h3 {
 .idea__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
   align-self: flex-start;
   padding-bottom: 3rem;
@@ -729,6 +769,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
 }
 label,
 legend {
@@ -911,6 +952,10 @@ input[list] {
   z-index: 10;
   width: 30vw;
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
 }
 
 .custom-suggestions li {

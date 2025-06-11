@@ -11,7 +11,7 @@
   const handleInputField = (e) => {
     const $input = e.currentTarget;
     const $error = $input.parentElement.querySelector(`.error`);
-    if ($input.checkValidity()) {
+    if ($error && $input.checkValidity()) {
       $error.textContent = ``;
     }
   };
@@ -82,6 +82,7 @@
       $input.addEventListener(`input`, handleInputField);
     });
   };
-
-  init();
+  if (window.location.href.includes("page=form")) {
+    init();
+  }
 }

@@ -23,8 +23,18 @@
 
                 </p>
             </div>
+            <div class="idea__action">
+                <span class="idea__tooltip">
+                    <i class="fa-solid fa-arrow-right-long"></i> Press here to <strong>"record"</strong> a test message
+                    to yourself.<br>
+                    No pressure — it’s not saved, tracked, or judged. Just you, your voice, and a vintage receiver
+                </span>
+                <a class="CTA__button--round" id="openMicPopup">
+                    <i class="fa-solid fa-microphone fa-2x"></i>
+                </a>
+            </div>
         </div>
-        <img class="idea__image" src="assets/intro_phone.svg" alt="Breath Focus Spinner">
+        <img class="idea__image" src="assets/idea1.svg" alt="Breath Focus Spinner">
     </article>
     <div class="navigation__button">
         <a href="index.php?page=idea2" class="arrow-button-svg">
@@ -36,4 +46,17 @@
             <span class="arrow-label">Breath Focus Spinner</span>
         </a>
     </div>
+    <div class="popup hidden" id="micPopup">
+        <div class="popup__content">
+            <button class="popup__close" id="closeMicPopup">&times;</button>
+            <h2>Send a Self Message</h2>
+            <canvas id="micBars" width="400" height="120"></canvas>
+            <div class="popup__text">
+                <p class="bold-text">Talk to yourself — no pressure.</p>
+                <p>Nothing’s recorded or saved. Just you, your voice, and the visual response.</p>
+            </div>
+        </div>
+    </div>
+
+
 </section>

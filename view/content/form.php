@@ -80,7 +80,7 @@ if (!empty($errors)) {
             </span>
         </label>
         <input type="text" id="impact" name="impact" required class="input" placeholder="Start typing..."
-            autocomplete="off" class="input" />
+            autocomplete="off" />
         <ul class="custom-suggestions" id="suggestionBox"></ul>
         <span class="error"><?php if (!empty($errors['impact']))
             echo $errors['impact']; ?></span>
