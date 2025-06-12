@@ -77,10 +77,6 @@ li {
 body {
   color: var(--main-text);
   background-color: var(--main-bg);
-  /* background-image: url(../assets/bg.png);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; */
   font-family: var(--font-body);
   margin: 0;
   width: 100%;
@@ -224,7 +220,7 @@ main {
 
 .text-underline {
   text-decoration: underline;
-  text-decoration-thickness: 0var (--space-3);
+  text-decoration-thickness: 0.125rem;
 }
 section {
   margin: 0 auto;
@@ -560,7 +556,6 @@ h3 {
   transition: fill 0.3s ease;
 }
 
-/* Position the label over the SVG */
 .arrow-button-svg .arrow-label {
   position: absolute;
   pointer-events: none;
@@ -570,15 +565,15 @@ h3 {
 }
 
 .arrow-button-svg:hover {
-  color: var(--main-bg); /* text color on hover */
+  color: var(--main-bg);
   transform: translateY(-2px);
 }
 
 .arrow-button-svg:hover svg path {
-  fill: var(--dark-blue); /* new fill color on hover */
+  fill: var(--dark-blue);
 }
 .secondary-button:hover svg path {
-  fill: var(--light-dark-blue); /* or any color you want */
+  fill: var(--light-dark-blue);
 }
 .tool {
   display: flex;
@@ -659,7 +654,7 @@ h3 {
   background-position: center;
 
   width: 100%;
-  aspect-ratio: 16 / 9; /* ✅ Use the real aspect ratio of your SVG */
+  aspect-ratio: 16 / 9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -706,10 +701,6 @@ h3 {
   transition: transform 0.2s ease;
 }
 
-/* .review-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 var(--space-3) rgba(0, 0, 0, 0.1); 
-} */
 .review-card__user {
   display: flex;
   flex-direction: row;
@@ -717,8 +708,9 @@ h3 {
 }
 .review-card__name {
   font-weight: bold;
-  font-size: 1var (--space-6);
+  font-size: var(--font-size-base);
 }
+
 .review-card__date {
   font-size: 0.7rem;
 }
@@ -1029,22 +1021,9 @@ input[list] {
   transform-origin: center center;
 }
 
-@keyframes rotateDial {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.rotating {
-  animation: rotateDial 2s linear infinite;
-  transform-origin: center center;
-}
 .rotary__dial-wrapper {
   position: relative;
-  width: 60%; /* adjust to your dial size */
+  width: 60%;
   height: auto;
   margin: 0 auto;
 }
@@ -1067,8 +1046,8 @@ input[list] {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* clicks go through to dial */
-  z-index: 2; /* make sure it's on top */
+  pointer-events: none;
+  z-index: 2;
 }
 .tool-2__interaction {
   width: 50vw;
@@ -1089,7 +1068,7 @@ input[list] {
   font-size: var(--font-size-m);
   font-weight: 600;
   margin-bottom: var(--space-3);
-  color: var(--dark-blue); /* or any color you want */
+  color: var(--dark-blue);
   min-height: var(--space-6);
   transition: opacity 0.5s ease;
 }
@@ -1147,7 +1126,7 @@ input[list] {
 }
 
 .keypad__prompt {
-  font-size: 1var (--space-3);
+  font-size: var(--font-size-base);
 }
 
 .keypad__textarea {
