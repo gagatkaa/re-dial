@@ -109,7 +109,6 @@ const isHomePage =
   window.location.href.endsWith("index.php");
 
 if (isHomePage && popup) {
-  console.log("set timeout for hidden");
   setTimeout(() => {
     popup.classList.remove("hidden");
   }, 15000);
