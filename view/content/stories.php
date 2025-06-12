@@ -4,7 +4,7 @@
             <h2>Real People, Real Calm</h2>
         </header>
         <article class="stories__text">
-            <p>These stories come from people who gave our tools a try — using the landline phone to find calm,
+            <p>These stories come from people who gave our tools a try, using the landline phone to find calm,
                 focus,
                 or
                 comfort in real moments.</p>

@@ -1,5 +1,5 @@
 <?php
-// Include the base Controller class and the Pizza model
+
 require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../model/Content.php';
 require_once __DIR__ . '/../model/Story.php';
@@ -12,9 +12,9 @@ class ContentController extends Controller
     $user_stories = Story::where('consent_to_share', 1)
       ->orderBy('id', 'desc')
       ->get()
-      ->toArray(); // Convert Eloquent collection to array
+      ->toArray();
 
-    shuffle($user_stories); // Randomize
+    shuffle($user_stories);
     $preview_stories = array_slice($user_stories, 0, 3); // Get 3
 
     $this->set('user_stories', $preview_stories);
@@ -38,10 +38,10 @@ class ContentController extends Controller
   }
   public function form()
   {
-    // check if the form was submitted
+
     if (!empty($_POST['action'])) {
 
-      // check which form was submitted
+
       if ($_POST['action'] == 'add_story') {
         $story = new Story();
         $story->user_name = $_POST['user_name'];
@@ -50,17 +50,15 @@ class ContentController extends Controller
         $story->impact = $_POST['impact'];
         // $story->consent_to_share = isset($_POST['consent_to_share']) ? 1 : 0;
         $story->consent_to_share = !empty($_POST['consent_to_share']) ? 1 : 0;
-        echo $_POST['consent_to_share'];
-        echo isset($_POST['consent_to_share']);
 
-        //validate
+
+
         $errors = $story->validate($story);
 
         if (empty($errors)) {
-          //insert the new pizza
+
           $story->save();
 
-          //redirect to convert post to get
           header('Location:index.php?page=stories');
 
           exit();
@@ -77,7 +75,7 @@ class ContentController extends Controller
   public function stories()
   {
 
-    // Fetch only public (consent given) stories
+
     $user_stories = Story::where('consent_to_share', 1)
       ->orderBy('id', 'desc')
       ->get();
@@ -87,15 +85,15 @@ class ContentController extends Controller
   }
   public function apiAddStory()
   {
-    // Call private helper that does all the logic
+
     $result = $this->_handleInsertStoryForm();
 
-    // Send the result back as JSON
+
     echo json_encode($result);
-    exit(); // stop further execution
+    exit();
   }
 
-  // Reusable method to handle insertion logic (shared by apiCreate & optionally others)
+
   private function _handleInsertStoryForm()
   {
 
@@ -106,7 +104,7 @@ class ContentController extends Controller
     $newStory->impact = $_POST['impact'];
     $newStory->consent_to_share = !empty($_POST['consent_to_share']) ? 1 : 0;
 
-    // Validate data
+
     $errors = Story::validate($newStory);
 
     if (empty($errors)) {

@@ -33,9 +33,11 @@
             </div>
             <div id="breathingMessage" class="breathing__message"></div>
             <div class="control__buttons">
-                <button class="CTA__button--round" id="playBtn"><i class="fa-solid fa-play fa-beat fa-2x"></i></button>
-                <button class="CTA__button--round" id="stopBtn"><i class="fa-solid fa-stop fa-2x"></i></button>
-                <button class="CTA__button--round" id="restartBtn">
+                <button class="CTA__button--round" id="playBtn" aria-label="Start breathing animation"><i
+                        class="fa-solid fa-play fa-beat fa-2x"></i></button>
+                <button class="CTA__button--round" id="stopBtn" aria-label="Stop breathing animation"><i
+                        class="fa-solid fa-stop fa-2x"></i></button>
+                <button class="CTA__button--round" id="restartBtn" aria-label="Restart breathing animation">
                     <i class="fa-solid fa-rotate-right fa-2x"></i>
                 </button>
 

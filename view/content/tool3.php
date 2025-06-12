@@ -32,7 +32,8 @@
                     </div>
                 </div>
                 <div class="control__buttons">
-                    <button class="CTA__button--round" id="pauseBtn"><i class="fa-solid fa-shuffle fa-2x"></i></button>
+                    <button class="CTA__button--round" id="pauseBtn" aria-label="Pause and shuffle prompt"><i
+                            class="fa-solid fa-shuffle fa-2x"></i></button>
                 </div>
             </div>
 

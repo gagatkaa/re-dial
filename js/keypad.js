@@ -21,9 +21,11 @@ if (window.location.href.includes("page=tool3")) {
     button.addEventListener("click", () => {
       const key = button.dataset.key;
       const promptText = prompts[key];
-      promptDisplay.textContent = promptText;
-      responseField.value = "";
-      calmMessage.classList.add("hidden"); // Hide message if user switches prompt
+      if (promptDisplay && responseField && calmMessage) {
+        promptDisplay.textContent = promptText;
+        responseField.value = "";
+        calmMessage.classList.add("hidden");
+      }
     });
   });
 

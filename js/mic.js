@@ -85,7 +85,7 @@ const closeMicBtn = document.getElementById("closeMicPopup");
 if (openMicBtn && micPopup && closeMicBtn) {
   openMicBtn.addEventListener("click", () => {
     micPopup.classList.remove("hidden");
-    startMicVisualizer(); // init visualizer only when popup is opened
+    startMicVisualizer();
   });
 
   closeMicBtn.addEventListener("click", () => {
@@ -101,8 +101,7 @@ if (openMicBtn && micPopup && closeMicBtn) {
       followUp.style.lineHeight = "1.5rem";
       followUp.style.color = "#0b6682";
       tooltip.appendChild(followUp);
-      tooltip.dataset.updated = "true"; // prevent duplicate insertions
+      tooltip.dataset.updated = "true";
     }
   });
 }
-init();

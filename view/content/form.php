@@ -1,16 +1,8 @@
 <h2 class="submit-form__header">#ReDialYourWay Submit Form</h2>
 
-<?php
-// show the errors
-if (!empty($errors)) {
-    var_dump($errors);
-}
-?>
-
 <form method="post" action="index.php?page=form" class="submit-form">
     <input type="hidden" name="action" value="add_story" class="form--add">
 
-    <!-- Name Field -->
     <div class="field">
         <label for="name">
             Name/Nickname
@@ -23,7 +15,7 @@ if (!empty($errors)) {
             echo $errors['user_name']; ?></span>
     </div>
 
-    <!-- When Used -->
+
     <div class="field">
         <label for="when">
             When did you use it?
@@ -42,14 +34,15 @@ if (!empty($errors)) {
             echo $errors['usage_time']; ?></span>
     </div>
 
-    <!-- Which Tool -->
+
     <div class="field">
-        <label for="tool-group">
+        <label>
             Which tool did you use?
             <span title="Select the calming tool that supported you.">
                 <i class="fa-solid fa-circle-info info__icon"></i>
             </span>
         </label>
+
         <div class="tool__radios" id="tool-group">
             <label class="radio-wrapper">
                 <input class="input" type="radio" name="tool_used" value="Silent Hotline" required />
@@ -71,7 +64,7 @@ if (!empty($errors)) {
             echo $errors['tool_used']; ?></span>
     </div>
 
-    <!-- How Did It Help -->
+
     <div class="field">
         <label for="impact">
             How did it help you?
@@ -86,19 +79,17 @@ if (!empty($errors)) {
             echo $errors['impact']; ?></span>
     </div>
 
-    <!-- Share Permission -->
+
     <fieldset>
         <legend>Can we share your story?</legend>
         <label class="checkbox-wrapper">
             <input type="checkbox" name="consent_to_share" value="1" />
             <span class="custom-checkbox"></span>
-            <p>I agree to have my story featured publicly as part of the ReDial community.</p>
+            <span>I agree to have my story featured publicly as part of the ReDial community.</span>
         </label>
     </fieldset>
 
-    <!-- Submit Button -->
-
-    <button type="submit">Submit Your Story</button>
+    <button class="CTA__button" type="submit">Submit Your Story</button>
 
 </form>
 <div class="popup hidden" id="genericPopup">
@@ -112,6 +103,6 @@ if (!empty($errors)) {
             <a class="CTA__button secondary-button" href="index.php?page=challenge_CTA">Cancel</a>
             <a class="CTA__button" href="index.php?page=stories">User Stories</a>
         </div>
-        <button class="popup__close" id="closePopup">&times;</button>
+        <button class="popup__close" id="closePopup" aria-label="Close popup">&times;</button>
     </div>
 </div>

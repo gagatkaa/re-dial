@@ -37,7 +37,7 @@
                 </a>
             </div>
         </div>
-        <img class="tool__image" src="assets/tool1.svg" alt="Breath Focus Spinner">
+        <img class="tool__image" src="assets/tool1.svg" alt="Silent Hotline">
     </article>
     <div class="navigation__button">
         <a href="index.php?page=tool2" class="arrow-button-svg">

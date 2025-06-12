@@ -2,21 +2,19 @@ const $storiesList = document.querySelector(".story__list");
 const $createForm = document.querySelector(".submit-form");
 
 const handleInsertStoryForm = async (e) => {
-  e.preventDefault(); // Prevent full page reload
-  // Basic HTML5 validation check
+  e.preventDefault();
+
   if (!$createForm.checkValidity()) {
-    // If invalid, stop here — validate.js handles error display
     return;
   }
-  // Send form data using fetch
+
   const response = await fetch("index.php?page=api-add-story", {
     method: "post",
-    body: new FormData($createForm), // Automatically gathers all form fields
+    body: new FormData($createForm),
   });
 
-  // Parse the JSON response
   const parsedResponse = await response.json();
-  // Clear the form inputs
+
   $createForm.reset();
 
   if (parsedResponse.result === "ok") {
@@ -106,15 +104,15 @@ document.addEventListener("click", (e) => {
 const popup = document.getElementById("genericPopup");
 const closeBtn = document.getElementById("closePopup");
 
-// Only show on home page
 const isHomePage =
   window.location.href.includes("page=home") ||
   window.location.href.endsWith("index.php");
 
 if (isHomePage && popup) {
+  console.log("set timeout for hidden");
   setTimeout(() => {
     popup.classList.remove("hidden");
-  }, 2000);
+  }, 15000);
 }
 
 if (closeBtn && popup) {
@@ -122,10 +120,5 @@ if (closeBtn && popup) {
     popup.classList.add("hidden");
   });
 }
-
-const isFormPage =
-  window.location.href.includes("page=form") ||
-  window.location.href.endsWith("index.php");
-
 
 init();

@@ -4,8 +4,8 @@ use \Illuminate\Database\Eloquent\Model;
 
 class Story extends Model
 {
-  public $timestamps = false; // ✅ if you're not using created_at / updated_at
-  protected $table = 'user_stories'; // ✅ THIS is required!
+  public $timestamps = false;
+  protected $table = 'user_stories';
 
   protected $fillable = [
     'user_name',
@@ -14,7 +14,7 @@ class Story extends Model
     'impact',
     'consent_to_share',
   ];
-  //
+
 
 
   public static function validate($data)

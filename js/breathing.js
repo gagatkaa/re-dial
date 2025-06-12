@@ -8,7 +8,7 @@ if (window.location.href.includes("page=tool2")) {
   if (dial && playBtn && restartBtn && stopBtn && message) {
     let isBreathing = false;
     let currentStep = 0;
-    let timeouts = []; // Store all timeouts to clear on stop/restart
+    let timeouts = [];
     const angles = [90, 180, 270];
 
     function clearAllTimeouts() {

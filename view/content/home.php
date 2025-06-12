@@ -87,7 +87,7 @@
     </article>
 </section>
 <div class="section__bg--cards">
-    <section class="stories__cards-section container" style="margin-bottom: 0;">
+    <section class="stories__cards-section container">
         <header class="stories__cards--header">
             <h3>Sneak Peek into Real Stories</h3>
             <p class="stories__cards--text">
@@ -121,6 +121,6 @@
         <div class="popup__button">
             <a class="CTA__button" href="index.php?page=challenge_CTA">Join Now!</a>
         </div>
-        <button class="popup__close" id="closePopup">&times;</button>
+        <button class="popup__close" id="closePopup" aria-label="Close popup">&times;</button>
     </div>
 </div>
