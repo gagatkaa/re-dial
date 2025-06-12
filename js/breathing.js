@@ -1,59 +1,65 @@
-const dial = document.querySelector(".rotary-dial");
-const playBtn = document.getElementById("playBtn");
-const pauseBtn = document.getElementById("pauseBtn");
-const stopBtn = document.getElementById("stopBtn");
-const message = document.getElementById("breathingMessage");
+if (window.location.href.includes("page=idea2")) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const dial = document.querySelector(".rotary-dial");
+    const playBtn = document.getElementById("playBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const message = document.getElementById("breathingMessage");
 
-let isBreathing = false;
-let currentStep = 0;
-const angles = [90, 180, 270];
+    if (!dial || !playBtn || !pauseBtn || !stopBtn || !message) {
+      console.warn("Breathing UI elements not found");
+      return;
+    }
 
-function showMessage(text) {
-  message.textContent = text;
-  message.style.opacity = 1;
-}
+    let isBreathing = false;
+    let currentStep = 0;
+    const angles = [90, 180, 270];
 
-function breatheRotate() {
-  if (!isBreathing) return;
+    function showMessage(text) {
+      message.textContent = text;
+      message.style.opacity = 1;
+    }
 
-  const angle = angles[currentStep % angles.length];
-  dial.style.transition = "transform 2s ease-in-out";
-  dial.style.transform = `rotate(${angle}deg)`;
-  showMessage("Inhale");
+    function breatheRotate() {
+      if (!isBreathing) return;
 
-  // Inhale → Hold
-  setTimeout(() => {
-    showMessage("Hold");
+      const angle = angles[currentStep % angles.length];
+      dial.style.transition = "transform 2s ease-in-out";
+      dial.style.transform = `rotate(${angle}deg)`;
+      showMessage("Inhale");
 
-    // Start exhale (back to 0)
-    setTimeout(() => {
-      dial.style.transition = "transform 4s ease-out";
-      dial.style.transform = `rotate(0deg)`;
-      showMessage("Exhale");
-
-      // After exhale complete → next cycle
       setTimeout(() => {
-        currentStep++;
+        showMessage("Hold");
+
+        setTimeout(() => {
+          dial.style.transition = "transform 4s ease-out";
+          dial.style.transform = `rotate(0deg)`;
+          showMessage("Exhale");
+
+          setTimeout(() => {
+            currentStep++;
+            breatheRotate();
+          }, 4000);
+        }, 1500);
+      }, 2000);
+    }
+
+    playBtn.addEventListener("click", () => {
+      if (!isBreathing) {
+        isBreathing = true;
         breatheRotate();
-      }, 4000); // match exhale duration
-    }, 1500); // Hold duration
-  }, 2000); // Inhale duration
+      }
+    });
+
+    pauseBtn.addEventListener("click", () => {
+      isBreathing = false;
+    });
+
+    stopBtn.addEventListener("click", () => {
+      isBreathing = false;
+      dial.style.transition = "transform 1s ease-out";
+      dial.style.transform = "rotate(0deg)";
+      showMessage("");
+    });
+  });
 }
-
-playBtn.addEventListener("click", () => {
-  if (!isBreathing) {
-    isBreathing = true;
-    breatheRotate();
-  }
-});
-
-pauseBtn.addEventListener("click", () => {
-  isBreathing = false;
-});
-
-stopBtn.addEventListener("click", () => {
-  isBreathing = false;
-  dial.style.transition = "transform 1s ease-out";
-  dial.style.transform = "rotate(0deg)";
-  showMessage("");
-});
