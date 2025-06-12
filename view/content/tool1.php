@@ -17,7 +17,8 @@
                 <p class="tool__instructions">
                     <span class="tool__howto-label">How it helps:</span></br>
                     Talking out loud can be a powerful way to process emotions, especially during panic or stress. It
-                    creates a safe, judgment-free moment of expression, like calling a version of yourself who always
+                    creates a <span class="bold-text">safe, judgment-free </span> moment of expression, like calling a
+                    version of yourself who always
                     listens.
 
 

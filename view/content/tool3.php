@@ -1,6 +1,6 @@
 <section class="tool__content container">
     <article class="tool section-gap">
-        <div class="tool__info">
+        <div class="tool__info tool__info--tool3">
             <header class="tool__header">
                 <h2>Grounding Keypad Tool</h2>
                 <p class="tool__subtitle">Press your way to the present.</p>
@@ -15,7 +15,8 @@
                 <p class="tool__instructions">
                     <span class="tool__howto-label">How it helps:</span><br>
                     When dissociation or overwhelm sets in, pressing the buttons gives structure and focus. One key at a
-                    time, you’re guided back to the present. Reconnecting with your body, your breath, and your
+                    time, you’re <span class="bold-text">guided back to the present</span>. Reconnecting with your body,
+                    your breath, and your
                     surroundings.
 
                 </p>

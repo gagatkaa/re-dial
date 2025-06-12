@@ -572,8 +572,11 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5rem;
+  gap: 4rem;
   max-width: 30rem;
+}
+.tool__info--tool3 {
+  max-width: 33rem;
 }
 .tool__image {
   height: 70vh;
@@ -582,6 +585,7 @@ h3 {
 }
 .tool__header > h2 {
   font-size: 3rem;
+  color: var(--dark-blue);
 }
 .tool__subtitle {
   font-size: 1.25rem;
@@ -609,6 +613,8 @@ h3 {
   flex-wrap: wrap;
 }
 .tool__howto-label {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
   font-weight: 600;
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -625,28 +631,19 @@ h3 {
   line-height: 1.875rem;
 }
 
-.stories__image {
-  width: 20vw;
-  height: auto;
-  object-fit: contain;
-  align-self: center;
-  position: absolute;
-  right: 10vw;
-  top: 15vh;
-}
 .stories__bg {
-  background-image: url(../assets/stories_bg.svg);
-  background-size: cover;
-  background-position: top center;
+  background-image: url("../assets/stories_bg.svg");
+  background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 10vh;
+  background-position: center;
 
   width: 100%;
-
-  padding: 2.5vh 0; /* top & bottom padding */
-  min-height: 50vh; /* ensures it stretches vertically */
-  box-sizing: border-box;
+  aspect-ratio: 16 / 9; /* ✅ Use the real aspect ratio of your SVG */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .stories__cards-section {
   display: flex;
   flex-direction: column;
@@ -737,7 +734,6 @@ h3 {
   text-align: center;
   gap: 4rem;
   line-height: 1.875rem;
-  /* margin-bottom: 5rem; */
 }
 .CTA__section {
   gap: 0;

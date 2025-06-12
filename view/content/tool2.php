@@ -17,7 +17,7 @@
                     <span class="tool__howto-label">How it helps:</span><br>
                     Structured breathing naturally helps calm and soothe the nervous system. With a simple tool and a
                     soft
-                    visual rhythm, you can slow down and breathe with purpose.
+                    visual rhythm, you can <span class="bold-text">slow down and breathe </span> with purpose.
                     It offers a gentle anchor in stressful moments, guiding your focus back to your body and breath.
 
 

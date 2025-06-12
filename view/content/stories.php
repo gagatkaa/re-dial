@@ -1,6 +1,5 @@
 <div class="stories__bg">
     <section class="centered-section">
-        <img class="stories__image" src="assets/intro_phone.svg" alt="Old Landline phone">
         <header class="stories__header">
             <h2>Real People, Real Calm</h2>
         </header>
