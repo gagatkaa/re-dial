@@ -1,5 +1,5 @@
 <?php
-$allowedPages = ['home', 'idea1', 'idea2', 'idea3', 'stories', 'challenge_CTA'];
+$allowedPages = ['home', 'tool1', 'tool2', 'tool3', 'stories', 'challenge_CTA'];
 $currentPage = in_array($_GET['page'] ?? '', $allowedPages) ? $_GET['page'] : 'home';
 ?>
 
@@ -53,8 +53,8 @@ $currentPage = in_array($_GET['page'] ?? '', $allowedPages) ? $_GET['page'] : 'h
                         href="index.php?page=home">Home</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link <?= in_array($currentPage, ['idea1', 'idea2', 'idea3']) ? 'active' : '' ?>"
-                        href="index.php?page=idea1">Ideas</a>
+                    <a class="menu__link <?= in_array($currentPage, ['tool1', 'tool2', 'tool3']) ? 'active' : '' ?>"
+                        href="index.php?page=tool1">Tools</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link <?= $currentPage === 'stories' ? 'active' : '' ?>"
@@ -104,6 +104,7 @@ $currentPage = in_array($_GET['page'] ?? '', $allowedPages) ? $_GET['page'] : 'h
     <script src="js/script.js"></script>
     <script src="js/mic.js"></script>
     <script src="js/breathing.js"></script>
+    <script src="js/keypad.js"></script>
     <script src="js/validate.js"></script>
 </body>
 

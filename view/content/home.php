@@ -19,7 +19,9 @@
             <div class="about__text">
                 <p>Before smartphones and apps, we reached out to the world through a landline. It was steady,
                     comforting, and part of our daily lives.
-                    Now, we're bringing it back. Not to connect with others, but to reconnect with yourself.</p>
+                    <span class="bold-text">Now, we're bringing it back. </span>Not to connect with others, but to
+                    reconnect with yourself.
+                </p>
             </div>
         </article>
         <article class="about__content left-aligned">
@@ -27,7 +29,8 @@
                 <h3 class="about__title">How Can It Help?</h3>
             </header>
             <div class="about__text">
-                <p>With just one object, you can slow your breath, quiet your mind, and come back to the present.
+                <p>With just one object, you can slow your breath, quiet your mind, and <span class="bold-text">come
+                        back to the present</span>.
                     Each feature repurposes a part of the phone to create a soothing, intuitive ritual — perfect for
                     moments when the world feels overwhelming.</p>
 
@@ -48,10 +51,10 @@
         <p class="bold-text">Choose one to begin.</p>
     </article>
     <article class="tools__cards">
-        <a href="index.php?page=idea1" class="tools__card-link">
+        <a href="index.php?page=tool1" class="tools__card-link">
             <div class="tools__card">
                 <div class="card__frame">
-                    <div class="masked-image idea1"></div>
+                    <div class="masked-image tool1"></div>
                 </div>
                 <div class="tools__info">
                     <h4 class="tools__name">Silent Hotline</h4>
@@ -59,21 +62,21 @@
                 </div>
             </div>
         </a>
-        <a href="index.php?page=idea2" class="tools__card-link">
+        <a href="index.php?page=tool2" class="tools__card-link">
             <div class="tools__card inverted-card">
                 <div class="tools__info">
                     <h4 class="tools__name">Breath Focus Spinner</h4>
                     <p class="tools__description">Dial down the panic.</p>
                 </div>
                 <div class="card__frame">
-                    <div class="masked-image idea2"></div>
+                    <div class="masked-image tool2"></div>
                 </div>
             </div>
         </a>
-        <a href="index.php?page=idea3" class="tools__card-link">
+        <a href="index.php?page=tool3" class="tools__card-link">
             <div class="tools__card">
                 <div class="card__frame">
-                    <div class="masked-image idea3"></div>
+                    <div class="masked-image tool3"></div>
                 </div>
                 <div class="tools__info">
                     <h4 class="tools__name">Grounding Keypad</h4>
@@ -88,7 +91,7 @@
         <header class="stories__cards--header">
             <h3>Sneak Peek into Real Stories</h3>
             <p class="stories__cards--text">
-                See how others have used ReDial to reconnect and reflect.
+                See how others have used ReDial to <span class="bold-text">reconnect and reflect</span>.
             </p>
         </header>
         <div class="stories__cards story__list">
@@ -112,7 +115,7 @@
     <div class="popup__content">
         <h2>Join the #ReDialYourWay Challenge</h2>
         <div class="popup__text">
-            <p>Tried one of our ideas with an old landline phone?</p>
+            <p>Tried one of our tools with an old landline phone?</p>
             <p class="bold-text">Submit it and get featured!</p>
         </div>
         <div class="popup__button">

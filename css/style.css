@@ -158,6 +158,7 @@ main {
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   max-width: fit-content;
+  cursor: pointer;
 }
 .CTA__button:hover {
   background-color: var(--dark-blue);
@@ -186,14 +187,14 @@ main {
   background-color: var(--dark-blue);
   transform: translateY(-2px);
 }
-.idea__action {
+.tool__action {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-top: 1rem;
 }
 
-.idea__tooltip {
+.tool__tooltip {
   font-size: 0.9rem;
   color: var(--text-muted, #444);
   max-width: 300px;
@@ -509,15 +510,15 @@ h3 {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
-.idea1 {
+.tool1 {
   background-image: url("../assets/phone_reciever.svg");
 }
 
-.idea2 {
-  background-image: url("../assets/rotary_dial.svg");
+.tool2 {
+  background-image: url("../assets/phone_rotary.svg");
   background-position: 50% 20%;
 }
-.idea3 {
+.tool3 {
   background-image: url("../assets/phone_keypad.svg");
   background-position: center;
   background-size: 80%;
@@ -558,31 +559,34 @@ h3 {
 .secondary-button:hover svg path {
   fill: var(--light-dark-blue); /* or any color you want */
 }
-.idea {
+.tool {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.idea__info {
+.section-gap {
+  gap: 4rem;
+}
+.tool__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5rem;
-  width: 35vw;
+  max-width: 30rem;
 }
-.idea__image {
+.tool__image {
   height: 70vh;
   width: auto;
   object-fit: contain;
 }
-.idea__header > h2 {
+.tool__header > h2 {
   font-size: 3rem;
 }
-.idea__subtitle {
+.tool__subtitle {
   font-size: 1.25rem;
 }
-.idea__content {
+.tool__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -604,17 +608,17 @@ h3 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.idea__howto-label {
+.tool__howto-label {
   font-weight: 600;
   display: inline-block;
   margin-bottom: 0.5rem;
 }
-.idea__description {
+.tool__description {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.idea__instructions {
+.tool__instructions {
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
@@ -1046,7 +1050,7 @@ input[list] {
   pointer-events: none; /* clicks go through to dial */
   z-index: 2; /* make sure it's on top */
 }
-.idea-2__interaction {
+.tool-2__interaction {
   width: 50vw;
   height: auto;
   display: flex;
@@ -1068,4 +1072,73 @@ input[list] {
   color: var(--dark-blue); /* or any color you want */
   min-height: 2rem;
   transition: opacity 0.5s ease;
+}
+.keypad {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.keypad__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.keypad__box {
+  background-color: var(--light-blue); /* or var(--light-gray) */
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  margin: 0 auto;
+  height: 20rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+.keypad__buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  gap: 1rem 1.5rem;
+  justify-content: space-between;
+}
+
+.keypad__button {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--gold);
+  color: var(--main-bg);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0.25rem rgba(0, 0, 0, 0.2);
+}
+.keypad__button:hover {
+  background-color: var(--dark-blue);
+  color: var(--main-bg);
+  transform: translateY(-2px);
+}
+.keypad__prompt-area {
+  text-align: center;
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.keypad__prompt {
+  font-size: 1.1rem;
+}
+
+.keypad__textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.calm-message {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #4a9078;
 }

@@ -24,15 +24,15 @@ class ContentController extends Controller
   {
 
   }
-  public function idea1()
+  public function tool1()
   {
 
   }
-  public function idea2()
+  public function tool2()
   {
 
   }
-  public function idea3()
+  public function tool3()
   {
 
   }

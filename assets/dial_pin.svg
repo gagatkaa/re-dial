@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.33 344.33">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.33 345.33">
   <defs>
     <style>
       .cls-1 {
-        fill: none;
-        stroke: #195059;
+        fill: #2c8484;
+        stroke: #0e5b59;
       }
 
       .cls-1, .cls-2 {
@@ -12,15 +12,16 @@
       }
 
       .cls-2 {
-        fill: #2c8484;
-        stroke: #0e5b59;
+        fill: none;
+        stroke: #195059;
+        stroke-width: 2px;
       }
     </style>
   </defs>
   <g id="pin_dial">
     <g>
-      <circle class="cls-1" cx="172.17" cy="172.17" r="171.63"/>
-      <path class="cls-2" d="M311.31,269.07l-19.71-30.89c-.47-.74.12-1.71,1-1.61l35.62,3.74c.73.08,1.16.84.84,1.5-2.23,4.59-9.83,19.79-16.04,27.36-.46.56-1.32.51-1.71-.1Z"/>
+      <circle class="cls-2" cx="172.67" cy="172.67" r="171.63"/>
+      <path class="cls-1" d="M311.81,269.57l-19.71-30.89c-.47-.74.12-1.71,1-1.61l35.62,3.74c.73.08,1.16.84.84,1.5-2.23,4.59-9.83,19.79-16.04,27.36-.46.56-1.32.51-1.71-.1Z"/>
     </g>
   </g>
 </svg>

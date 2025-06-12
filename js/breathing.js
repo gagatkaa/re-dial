@@ -1,19 +1,20 @@
-if (window.location.href.includes("page=idea2")) {
-  document.addEventListener("DOMContentLoaded", () => {
-    const dial = document.querySelector(".rotary-dial");
-    const playBtn = document.getElementById("playBtn");
-    const pauseBtn = document.getElementById("pauseBtn");
-    const stopBtn = document.getElementById("stopBtn");
-    const message = document.getElementById("breathingMessage");
+if (window.location.href.includes("page=tool2")) {
+  const dial = document.querySelector(".rotary-dial");
+  const playBtn = document.getElementById("playBtn");
+  const restartBtn = document.getElementById("restartBtn");
+  const stopBtn = document.getElementById("stopBtn");
+  const message = document.getElementById("breathingMessage");
 
-    if (!dial || !playBtn || !pauseBtn || !stopBtn || !message) {
-      console.warn("Breathing UI elements not found");
-      return;
-    }
-
+  if (dial && playBtn && restartBtn && stopBtn && message) {
     let isBreathing = false;
     let currentStep = 0;
+    let timeouts = []; // Store all timeouts to clear on stop/restart
     const angles = [90, 180, 270];
+
+    function clearAllTimeouts() {
+      timeouts.forEach(clearTimeout);
+      timeouts = [];
+    }
 
     function showMessage(text) {
       message.textContent = text;
@@ -24,24 +25,31 @@ if (window.location.href.includes("page=idea2")) {
       if (!isBreathing) return;
 
       const angle = angles[currentStep % angles.length];
+
       dial.style.transition = "transform 2s ease-in-out";
       dial.style.transform = `rotate(${angle}deg)`;
       showMessage("Inhale");
 
-      setTimeout(() => {
-        showMessage("Hold");
-
+      timeouts.push(
         setTimeout(() => {
-          dial.style.transition = "transform 4s ease-out";
-          dial.style.transform = `rotate(0deg)`;
-          showMessage("Exhale");
+          showMessage("Hold");
 
-          setTimeout(() => {
-            currentStep++;
-            breatheRotate();
-          }, 4000);
-        }, 1500);
-      }, 2000);
+          timeouts.push(
+            setTimeout(() => {
+              dial.style.transition = "transform 4s ease-out";
+              dial.style.transform = "rotate(0deg)";
+              showMessage("Exhale");
+
+              timeouts.push(
+                setTimeout(() => {
+                  currentStep++;
+                  breatheRotate();
+                }, 4000)
+              );
+            }, 1500)
+          );
+        }, 2000)
+      );
     }
 
     playBtn.addEventListener("click", () => {
@@ -51,15 +59,28 @@ if (window.location.href.includes("page=idea2")) {
       }
     });
 
-    pauseBtn.addEventListener("click", () => {
+    restartBtn.addEventListener("click", () => {
+      clearAllTimeouts();
       isBreathing = false;
+      currentStep = 0;
+      dial.style.transition = "transform 0.3s ease-out";
+      dial.style.transform = "rotate(0deg)";
+      showMessage("Restarting...");
+
+      setTimeout(() => {
+        isBreathing = true;
+        breatheRotate();
+      }, 1000);
     });
 
     stopBtn.addEventListener("click", () => {
+      clearAllTimeouts();
       isBreathing = false;
-      dial.style.transition = "transform 1s ease-out";
+      dial.style.transition = "transform 0.3s ease-out";
       dial.style.transform = "rotate(0deg)";
       showMessage("");
     });
-  });
+  } else {
+    console.warn("Breathing UI elements not found");
+  }
 }

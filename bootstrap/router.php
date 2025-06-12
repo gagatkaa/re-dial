@@ -9,17 +9,17 @@ $routes = array(
     'controller' => 'Content',
     'action' => 'form'
   ),
-  'idea1' => array(
+  'tool1' => array(
     'controller' => 'Content',
-    'action' => 'idea1'
+    'action' => 'tool1'
   ),
-  'idea2' => array(
+  'tool2' => array(
     'controller' => 'Content',
-    'action' => 'idea2'
+    'action' => 'tool2'
   ),
-  'idea3' => array(
+  'tool3' => array(
     'controller' => 'Content',
-    'action' => 'idea3'
+    'action' => 'tool3'
   ),
   'stories' => array(
     'controller' => 'Content',
