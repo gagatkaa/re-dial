@@ -872,7 +872,8 @@ fieldset > label {
 }
 
 .checkbox-wrapper input[type="checkbox"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 .custom-checkbox {
