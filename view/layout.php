@@ -103,7 +103,7 @@ $currentPage = in_array($_GET['page'] ?? '', $allowedPages) ? $_GET['page'] : 'h
     </footer>
     <script src="js/script.js"></script>
     <script src="js/mic.js"></script>
-    <script src="js/breathing.js" defer></script>
+    <script src="js/breathing.js"></script>
     <script src="js/validate.js"></script>
 </body>
 

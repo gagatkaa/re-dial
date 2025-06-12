@@ -83,6 +83,31 @@
         </a>
     </article>
 </section>
+<div class="section__bg--cards">
+    <section class="stories__cards-section container" style="margin-bottom: 0;">
+        <header class="stories__cards--header">
+            <h3>Sneak Peek into Real Stories</h3>
+            <p class="stories__cards--text">
+                See how others have used ReDial to reconnect and reflect.
+            </p>
+        </header>
+        <div class="stories__cards story__list">
+            <?php foreach ($user_stories as $story): ?>
+                <div class="review-card">
+                    <div class="review-card__user">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="review-card__name"><?= htmlspecialchars($story['user_name'] ?? '') ?></div>
+                    </div>
+                    <div class="review-card__date"><?= htmlspecialchars($story['submitted_at'] ?? '') ?></div>
+                    <div class="review-card__usage"><?= htmlspecialchars($story['usage_time'] ?? '') ?></div>
+                    <div class="review-card__tool"><?= htmlspecialchars($story['tool_used'] ?? '') ?></div>
+                    <div class="review-card__data">"<?= nl2br(htmlspecialchars($story['impact'] ?? '')) ?>"</div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <a class="CTA__button centered-button" href="index.php?page=stories">Read More</a>
+    </section>
+</div>
 <div class="popup hidden" id="genericPopup">
     <div class="popup__content">
         <h2>Join the #ReDialYourWay Challenge</h2>

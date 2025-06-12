@@ -413,6 +413,18 @@ h3 {
   display: flex;
   justify-content: center;
 }
+.section__bg--cards {
+  background-image: url(../assets/section_cards_bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
 .tools__section {
   display: flex;
   flex-direction: column;
@@ -643,7 +655,22 @@ h3 {
   padding-block: 4rem;
   width: 100%;
 }
+.stories__cards--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
 
+  color: var(--dark-blue);
+}
+.stories__cards--text {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  color: var(--main-text);
+}
 .review-card {
   background: var(--white);
   border-radius: 1rem;
