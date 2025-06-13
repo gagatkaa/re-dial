@@ -113,7 +113,15 @@ if (isHomePage && popup) {
     popup.classList.remove("hidden");
   }, 15000);
 }
+const isTool3Page =
+  window.location.href.includes("page=tool3") ||
+  window.location.href.endsWith("index.php");
 
+if (isTool3Page && popup) {
+  setTimeout(() => {
+    popup.classList.remove("hidden");
+  }, 15000);
+}
 if (closeBtn && popup) {
   closeBtn.addEventListener("click", () => {
     popup.classList.add("hidden");

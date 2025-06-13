@@ -61,3 +61,16 @@
 
     </div>
 </section>
+<div class="popup hidden" id="genericPopup">
+    <div class="popup__content">
+        <h2>How did you like our Calming Tools?</h2>
+        <div class="popup__text">
+            <p>Let us and other users know. Submit now and get featured</p>
+            <p class="bold-text">Join the #ReDialYourWay Challenge!</p>
+        </div>
+        <div class="popup__button">
+            <a class="CTA__button" href="index.php?page=challenge_CTA">Submit Now</a>
+        </div>
+        <button class="popup__close" id="closePopup" aria-label="Close popup">&times;</button>
+    </div>
+</div>
