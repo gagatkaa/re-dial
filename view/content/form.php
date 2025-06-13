@@ -72,8 +72,9 @@
                 <i class="fa-solid fa-circle-info info__icon"></i>
             </span>
         </label>
-        <input type="text" id="impact" name="impact" required class="input" placeholder="Start typing..."
-            autocomplete="off" />
+        <textarea id="impact" name="impact" required class="input" placeholder="Start typing..." autocomplete="off"
+            rows="4"></textarea>
+
         <ul class="custom-suggestions" id="suggestionBox"></ul>
         <span class="error"><?php if (!empty($errors['impact']))
             echo $errors['impact']; ?></span>

@@ -42,8 +42,7 @@ if (window.location.href.includes("page=tool3")) {
   if (doneBtn) {
     doneBtn.addEventListener("click", () => {
       calmMessage.classList.remove("hidden");
-      calmMessage.textContent =
-        "Well done. You're doing better than you think. These moments always pass.";
+      calmMessage.textContent = "Do you feel grounded yet?";
     });
   }
 }
